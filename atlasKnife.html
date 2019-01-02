@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Atlas拆解</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <textarea name="" id="input" style="width: 30%;height: 900px;" placeholder="此处为输入"></textarea>
+    <textarea name="" id="output" style="width: 30%;height: 900px;" placeholder="此处为输出"></textarea>
+    <script src="atlasKnife.js"></script>
+    <script>
+        var input=document.getElementById('input');
+        partFliter = ['hair', 'eye', 'mouth']
+        var output = document.getElementById('output');
+        output.value = atlasFliter(input.value,partFliter);
+        
+        document.getElementById('input').onkeyup = function (e) {
+            output.value = atlasFliter(input.value,partFliter);
+        };
+    </script>
+</body>
+</html>
